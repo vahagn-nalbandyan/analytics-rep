@@ -1,0 +1,31 @@
+.navigation-analytics-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 230px;
+    height: 100vh;
+    padding-top: 80px;
+}
+
+.navigation-analytics-wrapper .nav-button-cont {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navigation-analytics-wrapper .nav-button {
+    display: flex;
+    flex-direction: column;
+    background-color: #EC244F;
+    color: #fff;
+    width: max-content;
+    padding: 10px 40px 10px 10px;
+    border-radius: 0 10px 10px 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 1px;
+}
