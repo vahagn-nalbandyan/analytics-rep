@@ -1,11 +1,14 @@
 import React from "react";  
 
-import '../../styles/components/dashboard.css';
+import '../../styles/components/dashboard/dashboard.css';
+import DashboardRevenue from "./dashboard-components/DashboardRevenue";
 
 const Dashboard = () => {
     return(
         <div className='dashboard-body' id='dashboard-body-analytics'>
-            <div className='dashboard-wrapper'>Dashboard</div>
+            <div className='dashboard-wrapper'>
+                <DashboardRevenue />
+            </div>
         </div>
     );
 }
