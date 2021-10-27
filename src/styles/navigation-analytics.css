@@ -42,11 +42,11 @@
             flex-direction: column;
     background-color: #EC244F;
     color: #fff;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
+    min-width: max-content;
+    width: 75%;
     padding: 10px 40px 10px 10px;
     border-radius: 0 10px 10px 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     letter-spacing: 1px;
 }
+

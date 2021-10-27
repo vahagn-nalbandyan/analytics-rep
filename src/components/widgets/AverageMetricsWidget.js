@@ -7,10 +7,8 @@ import '../../styles/components/widgets/average-metrics-widget.css';
 const AverageMetricsWidget = ({title, dataAmount, dataRate, dataStatus}) => {    
     const showArrow = () => {
         if(dataStatus === true) {
-            console.log('POSITIVE');
             return <ArrowUpwardIcon className='icon arrow-icon arrow-positive' />            
         } else {
-            console.log('NEGATIVE');
             return <ArrowDownwardIcon className='icon arrow-icon arrow-negative' />
         }
     }

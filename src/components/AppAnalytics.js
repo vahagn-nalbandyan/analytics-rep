@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
 import '../styles/app-analytics.css';
 
@@ -12,17 +13,9 @@ import Circulation from './circulation/Circulation';
 import HrmMetrics from './hrm-metrics/HrmMetrics';
 import EstimateValues from './estimate-values/EstimateValues';
 
-window.onbeforeunload = function () {
-    window.scrollTo(0, 0);        
-}
-
-window.onload = function () {
-    window.location.hash = "";
-    window.history.replaceState("", "", window.location.pathname);
-}
-const AppAnalytics = () => {      
-    
+const AppAnalytics = () => {    
     return(
+        <BrowserRouter>
         <div className='app-analytics-wrapper'>
             <HeaderAnalytics />
             <NavigationAnalytics />
@@ -35,6 +28,7 @@ const AppAnalytics = () => {
                 <EstimateValues />
             </div>
         </div>
+        </BrowserRouter>
     );
 }
 
