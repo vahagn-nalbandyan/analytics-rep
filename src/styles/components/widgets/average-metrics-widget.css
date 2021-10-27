@@ -1,16 +1,80 @@
 .average-metrics-widget-wrapper {
-    min-width: fit-content;
-    max-width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 15%;
+    max-width: 25%;
     height: 150px;
     margin: 0 20px;
-    padding: 30px;
+    padding: 20px;
     border-radius: 10px;
-    cursor: pointer;
     box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.75);
+    animation-name: widget;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
 }
 
-.average-metrics-widget-title {
+@keyframes widget {
+    from {
+        transform: translateY(850px)
+    }
+    to {
+        transform: translateY(0)
+    }
+}
+
+.average-metrics-widget-wrapper .button-cont {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.average-metrics-widget-wrapper .button-cont .widget-button {
+    width: 45%;
+    height: 15px;
+    font-size: 10px;
+    font-weight: 600;
+    background-color: rgb(173, 173, 173);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.average-metrics-widget-wrapper .button-cont .widget-button:hover {
+    transform: scale(1.03);
+}
+
+.average-metrics-widget-wrapper .button-cont .widget-button.selected {
+    background-color: hsl(199, 100%, 50%);
+}
+
+.average-metrics-widget-amount-cont {
+    animation-name: cont-appear;
+    animation-duration: 1s;
+    animation-delay: .3s;
+}
+
+@keyframes cont-appear {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.average-metrics-widget-title a {
     font-size: 20px;
+    font-weight: 600;
+    color: rgb(50, 50, 50);
+}
+
+.average-metrics-widget-title a:active {
+    color: hsl(199, 100%, 30%);
 }
 
 .average-metrics-widget-amount-cont {

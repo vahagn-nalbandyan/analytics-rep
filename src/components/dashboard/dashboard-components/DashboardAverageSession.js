@@ -4,7 +4,7 @@ import axios from "axios";
 
 import AverageMetricsWidget from "../../widgets/AverageMetricsWidget";
 
-const DashboardRevenue = () => {
+const DashboardAverageSession = () => {
     const [monthSelected, setMonthSelected] = useState(true)
     const [revenueDataArr, setRevenueDataArr] = useState([]);
     const [revenueAmount, setRevenueAmount] = useState(null);
@@ -16,14 +16,14 @@ const DashboardRevenue = () => {
         .then(response => {  
             if(monthSelected) {
                 setRevenueDataArr(response.data);   
-                setRevenueAmount(response.data[12]['id']);
-                setRevenueRate(response.data[161]['userId']);
-                setRevenueStatus(response.data[136]['completed']);                         
+                setRevenueAmount(response.data[144]['id']);
+                setRevenueRate(response.data[166]['userId']);
+                setRevenueStatus(response.data[155]['completed']);                         
             } else {
                 setRevenueDataArr(response.data);   
-                setRevenueAmount(response.data[18]['id']);
-                setRevenueRate(response.data[131]['userId']);
-                setRevenueStatus(response.data[182]['completed']); 
+                setRevenueAmount(response.data[111]['id']);
+                setRevenueRate(response.data[112]['userId']);
+                setRevenueStatus(response.data[113]['completed']); 
             }    
         })
         .catch(err => {
@@ -37,9 +37,9 @@ const DashboardRevenue = () => {
 
     return(
         <>
-            <AverageMetricsWidget jumpToHref='/#revenue-body-analytics' parentCallback={handleCallback} title='Revenue' dataAmount={revenueAmount} dataRate={revenueRate} dataStatus={revenueStatus} />
+            <AverageMetricsWidget jumpToHref='/#estimate-values-body-analytics' parentCallback={handleCallback} title='Average Session Time' dataAmount={revenueAmount} dataRate={revenueRate} dataStatus={revenueStatus} />
         </>
     );
 }
 
-export default DashboardRevenue;
+export default DashboardAverageSession;

@@ -13,7 +13,7 @@ import Circulation from './circulation/Circulation';
 import HrmMetrics from './hrm-metrics/HrmMetrics';
 import EstimateValues from './estimate-values/EstimateValues';
 
-const AppAnalytics = () => {    
+const AppAnalytics = () => {        
     return(
         <BrowserRouter>
         <div className='app-analytics-wrapper'>
