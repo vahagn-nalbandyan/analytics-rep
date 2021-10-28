@@ -1,4 +1,5 @@
 import React, { useRef } from "react";  
+import { NavHashLink } from "react-router-hash-link";
 
 import '../../styles/components/dashboard/dashboard.css';
 
@@ -6,6 +7,8 @@ import DashboardAverageDelivery from "./dashboard-components/DashboardAverageDel
 import DashboardAverageSession from "./dashboard-components/DashboardAverageSession";
 import DashboardRevenue from "./dashboard-components/DashboardRevenue";
 import DashboardSessionNumbers from "./dashboard-components/DashboardSessionNumbers";
+import DemographicMap from "./dashboard-components/DemographicMap";
+import TargetGroup from './dashboard-components/TargetGroup';
 
 const Dashboard = () => {
     const dashboardSection = useRef();    
@@ -13,10 +16,29 @@ const Dashboard = () => {
     return(
         <div className='dashboard-body' id='dashboard-body-analytics'>
             <div ref={dashboardSection} className='dashboard-wrapper'>
-                <DashboardRevenue />
-                <DashboardAverageDelivery />
-                <DashboardSessionNumbers />
-                <DashboardAverageSession />
+                <div className='dashboard-widget-cont'>
+                    <DashboardRevenue />
+                    <DashboardAverageDelivery />
+                    <DashboardSessionNumbers />
+                    <DashboardAverageSession />
+                </div>
+                <div className='demography-cont'>
+                    <div className='target-group-cont'>
+                        <NavHashLink smooth to='/#demography-body-analytics'>Target Group By Age</NavHashLink>
+                        <TargetGroup />
+                    </div>
+                    <div className='demographic-map-cont'>
+                        <DemographicMap />
+                    </div>
+                </div>
+                <div className='lower-cont'>
+                    <div>
+                        <h2>TOP OF ANYTHING</h2>
+                    </div>
+                    <div>
+                        <h2>REVENUE PER DEPARTMENT</h2>
+                    </div>
+                </div>
             </div>
         </div>
     );

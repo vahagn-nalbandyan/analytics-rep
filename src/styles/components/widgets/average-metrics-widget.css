@@ -9,19 +9,8 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.75);
-    animation-name: widget;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
 }
 
-@keyframes widget {
-    from {
-        transform: translateY(850px)
-    }
-    to {
-        transform: translateY(0)
-    }
-}
 
 .average-metrics-widget-wrapper .button-cont {
     width: 100%;

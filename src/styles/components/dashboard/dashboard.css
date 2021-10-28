@@ -7,9 +7,73 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;    
     border: 1px solid red;
     height: 100%;
     padding: 25px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation-name: dashboard-transform;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes dashboard-transform {
+    from {
+        transform: translateY(850px)
+    }
+    to {
+        transform: translateY(0)
+    }
+}
+
+.dashboard-wrapper .dashboard-widget-cont {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    border: 1px dotted grey;
+    padding: 25px 0;
+}
+
+.dashboard-wrapper .demography-cont,
+.dashboard-wrapper .lower-cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px dotted grey;
+    padding: 30px 0;
+}
+
+.dashboard-wrapper .demography-cont {
+    margin-bottom: 5px;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.dashboard-wrapper .demography-cont .target-group-cont {
+    width: 40%;
+}
+
+.dashboard-wrapper .demography-cont .demographic-map-cont {
+    width: 40%;
+}
+
+.dashboard-wrapper .demography-cont .target-group-cont a {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(50, 50, 50);
+    position: relative;
+    display: block;
+    margin-bottom: 15px;
+    z-index: 1;
+}
+
+.dashboard-wrapper .demography-cont .target-group-cont a:active {
+    color: hsl(199, 100%, 30%);
+}
+
+.dashboard-wrapper .demography-cont h2,
+.dashboard-wrapper .lower-cont h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 60px;
 }
