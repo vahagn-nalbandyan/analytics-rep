@@ -6,6 +6,9 @@
 .revenue-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
+    background-color: white;
+    position: relative;
+    z-index: 1;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

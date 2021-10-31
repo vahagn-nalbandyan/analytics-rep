@@ -5,7 +5,7 @@
 
 .dashboard-wrapper {
     display: -webkit-box;
-    display: -ms-flexbox;
+    display: -ms-flexbox;    
     display: flex;
     flex-direction: column;    
     border: 1px solid red;
@@ -58,7 +58,7 @@
     width: 40%;
 }
 
-.dashboard-wrapper .demography-cont .target-group-cont a {
+.dashboard-wrapper .demography-cont .target-group-cont p {
     font-size: 20px;
     font-weight: 600;
     color: rgb(50, 50, 50);
@@ -68,9 +68,6 @@
     z-index: 1;
 }
 
-.dashboard-wrapper .demography-cont .target-group-cont a:active {
-    color: hsl(199, 100%, 30%);
-}
 
 .dashboard-wrapper .demography-cont h2,
 .dashboard-wrapper .lower-cont h2 {

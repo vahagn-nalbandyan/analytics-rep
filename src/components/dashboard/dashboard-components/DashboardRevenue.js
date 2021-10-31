@@ -37,7 +37,7 @@ const DashboardRevenue = () => {
 
     return(
         <>
-            <AverageMetricsWidget jumpToHref='/#revenue-body-analytics' parentCallback={handleCallback} title='Revenue' dataAmount={revenueAmount} dataRate={revenueRate} dataStatus={revenueStatus} />
+            <AverageMetricsWidget jumpToHref='revenue-body-analytics' parentCallback={handleCallback} title='Revenue' unit='$' dataAmount={revenueAmount} dataRate={revenueRate} dataStatus={revenueStatus} />
         </>
     );
 }

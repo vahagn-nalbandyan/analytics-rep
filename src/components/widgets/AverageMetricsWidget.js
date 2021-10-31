@@ -1,13 +1,13 @@
 /* eslint-disable */
 import React, { useState, useEffect } from "react";
-import { NavHashLink } from "react-router-hash-link";
+import { Link } from "react-scroll";
 
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 
 import '../../styles/components/widgets/average-metrics-widget.css';
 
-const AverageMetricsWidget = ({title, dataAmount, dataRate, dataStatus, parentCallback, jumpToHref}) => { 
+const AverageMetricsWidget = ({title, unit, dur, dataAmount, dataRate, dataStatus, parentCallback, jumpToHref}) => { 
     const [monthSelected, setMonthSelected] = useState(true);
     const [yearSelected, setYearSelected] = useState(false);
 
@@ -53,14 +53,14 @@ const AverageMetricsWidget = ({title, dataAmount, dataRate, dataStatus, parentCa
     return(
         <div className='average-metrics-widget-wrapper'>            
             <span className='average-metrics-widget-title'>
-                <NavHashLink smooth to={jumpToHref}>{title}</NavHashLink>
+                <Link spy={true} hashSpy={true} to={jumpToHref}>{title}</Link>
             </span>
             <div className='button-cont'>
                 <button onClick={onMonthBtnClick} className={`widget-button month ${monthSelectedClass}`}>MTH</button>
                 <button onClick={onYearBtnClick} className={`widget-button year ${yearSelectedClass}`}>YR</button>
             </div>
             <div className='average-metrics-widget-amount-cont'>
-                <span className='average-metrics-widget-amount'>${dataAmount}</span>
+                <span className='average-metrics-widget-amount'>{unit}{dataAmount}{dur}</span>
                 <span className='average-metrics-widget-amount-rate'>
                     {dataStatus ? '+' : '-'}{dataRate}% {showArrow()}
                 </span>

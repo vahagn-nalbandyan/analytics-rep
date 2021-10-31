@@ -1,5 +1,4 @@
-import React, { useRef } from "react";  
-import { NavHashLink } from "react-router-hash-link";
+import React, { useRef } from "react";
 
 import '../../styles/components/dashboard/dashboard.css';
 
@@ -24,7 +23,7 @@ const Dashboard = () => {
                 </div>
                 <div className='demography-cont'>
                     <div className='target-group-cont'>
-                        <NavHashLink smooth to='/#demography-body-analytics'>Target Group By Age</NavHashLink>
+                        <p>Target Group By Age</p>
                         <TargetGroup />
                     </div>
                     <div className='demographic-map-cont'>

@@ -37,7 +37,7 @@ const DashboardAverageDelivery = () => {
 
     return(
         <>
-            <AverageMetricsWidget jumpToHref='/#estimate-values-body-analytics' parentCallback={handleCallback} title='Average Delivery Time' dataAmount={revenueAmount} dataRate={revenueRate} dataStatus={revenueStatus} />
+            <AverageMetricsWidget jumpToHref='estimate-values-body-analytics' parentCallback={handleCallback} title='Average Delivery Time' dur='min' dataAmount={revenueAmount} dataRate={revenueRate} dataStatus={revenueStatus} />
         </>
     );
 }

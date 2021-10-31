@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable */
+import React, { useEffect, useRef } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
 import '../styles/app-analytics.css';
@@ -13,10 +14,48 @@ import Circulation from './circulation/Circulation';
 import HrmMetrics from './hrm-metrics/HrmMetrics';
 import EstimateValues from './estimate-values/EstimateValues';
 
-const AppAnalytics = () => {        
+const AppAnalytics = () => {  
+    let appRef = useRef(); ;
+    let els;  
+    useEffect(() => {
+        setTimeout(() => {
+            document.querySelector('html').style.scrollBehavior = 'smooth';
+        }, 500); 
+        els = document.querySelectorAll('.custom-context-menu'); 
+        document.body.addEventListener('click', removeClasses, true);      
+        document.body.addEventListener('contextmenu', removeClasses, true);        
+    }, []);    
+
+    let removeClasses = function() {
+        for (var i = 0; i < els.length; i++) {
+            els[i].classList.remove('open');
+        }
+    }    
+
+    // Handling Scroll
+    var isScrolling;   
+    
+    let addScrollingClasses = () => {
+        document.querySelector('.app-analytics-wrapper').classList.add('is-scrolling');
+    }
+    let removeScrollingClasses = () => {
+        document.querySelector('.app-analytics-wrapper').classList.remove('is-scrolling');
+    }
+    
+    window.addEventListener('scroll', addScrollingClasses)
+
+    window.addEventListener('scroll', function ( event ) {
+        window.clearTimeout( isScrolling );
+        isScrolling = setTimeout(function() {
+            removeScrollingClasses()
+        }, 66);
+    }, false);
+
+    
+
     return(
         <BrowserRouter>
-        <div className='app-analytics-wrapper'>
+        <div className='app-analytics-wrapper' ref={appRef}>
             <HeaderAnalytics />
             <NavigationAnalytics />
             <div className='app-analytics-body'>

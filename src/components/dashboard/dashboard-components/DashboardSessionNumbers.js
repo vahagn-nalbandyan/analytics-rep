@@ -37,7 +37,7 @@ const DashboardSessionNumbers = () => {
 
     return(
         <>
-            <AverageMetricsWidget jumpToHref='/#estimate-values-body-analytics' parentCallback={handleCallback} title='Number Of Sessions' dataAmount={revenueAmount} dataRate={revenueRate} dataStatus={revenueStatus} />
+            <AverageMetricsWidget jumpToHref='estimate-values-body-analytics' parentCallback={handleCallback} title='Number Of Sessions' dataAmount={revenueAmount} dataRate={revenueRate} dataStatus={revenueStatus} />
         </>
     );
 }
