@@ -66,7 +66,7 @@
   -ms-flex-align: center;
   align-items: center;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+  justify-content: space-between;
   border: 1px dotted grey;
   padding: 30px 0;
 }
@@ -103,4 +103,23 @@
 .dashboard-wrapper .lower-cont h2 {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 60px;
+}
+
+.dashboard-wrapper .lower-cont {
+  height: 100%;
+}
+
+.dashboard-wrapper .lower-cont .top-of-anything-cont,
+.dashboard-wrapper .lower-cont .revenue-per-department-cont {
+  width: 45%;
+  border: 1px solid green;
+  height: 100%;
+  margin: 0 20px;
+}
+
+.dashboard-wrapper .lower-cont .top-of-anything-cont p,
+.dashboard-wrapper .lower-cont .revenue-per-department-cont p {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(50, 50, 50);
 }

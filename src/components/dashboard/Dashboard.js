@@ -8,6 +8,7 @@ import DashboardRevenue from "./dashboard-components/DashboardRevenue";
 import DashboardSessionNumbers from "./dashboard-components/DashboardSessionNumbers";
 import DemographicMap from "./dashboard-components/DemographicMap";
 import TargetGroup from './dashboard-components/TargetGroup';
+import TopOfAnything from "./dashboard-components/TopOfAnything";
 
 const Dashboard = () => {
     const dashboardSection = useRef();    
@@ -31,11 +32,11 @@ const Dashboard = () => {
                     </div>
                 </div>
                 <div className='lower-cont'>
-                    <div>
-                        <h2>TOP OF ANYTHING</h2>
+                    <div className='top-of-anything-cont'>
+                        <TopOfAnything />
                     </div>
-                    <div>
-                        <h2>REVENUE PER DEPARTMENT</h2>
+                    <div className='revenue-per-department-cont'>
+                        <p>Revenue Per Department</p>
                     </div>
                 </div>
             </div>
