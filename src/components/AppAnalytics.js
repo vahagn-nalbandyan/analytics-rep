@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
 import '../styles/app-analytics.css';
@@ -15,20 +15,19 @@ import HrmMetrics from './hrm-metrics/HrmMetrics';
 import EstimateValues from './estimate-values/EstimateValues';
 
 const AppAnalytics = () => {  
-    let appRef = useRef(); ;
-    let els;  
+    let contextMenuItems;  
     useEffect(() => {
         setTimeout(() => {
             document.querySelector('html').style.scrollBehavior = 'smooth';
         }, 500); 
-        els = document.querySelectorAll('.custom-context-menu'); 
+        contextMenuItems = document.querySelectorAll('.custom-context-menu'); 
         document.body.addEventListener('click', removeClasses, true);      
         document.body.addEventListener('contextmenu', removeClasses, true);        
     }, []);    
 
     let removeClasses = function() {
-        for (var i = 0; i < els.length; i++) {
-            els[i].classList.remove('open');
+        for (var i = 0; i < contextMenuItems.length; i++) {
+            contextMenuItems[i].classList.remove('open');
         }
     }    
 
@@ -55,18 +54,18 @@ const AppAnalytics = () => {
 
     return(
         <BrowserRouter>
-        <div className='app-analytics-wrapper' ref={appRef}>
-            <HeaderAnalytics />
-            <NavigationAnalytics />
-            <div className='app-analytics-body'>
-                <Dashboard />
-                <Revenue />
-                <Demography />
-                <Circulation />
-                <HrmMetrics />
-                <EstimateValues />
+            <div className='app-analytics-wrapper'>
+                <HeaderAnalytics />
+                <NavigationAnalytics />                
+                <div className='app-analytics-body'>
+                    <Dashboard />
+                    <Revenue />
+                    <Demography />
+                    <Circulation />
+                    <HrmMetrics />
+                    <EstimateValues />
+                </div>
             </div>
-        </div>
         </BrowserRouter>
     );
 }

@@ -1,21 +1,33 @@
 .average-metrics-widget-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     min-width: 15%;
     max-width: 25%;
     height: 150px;
     margin: 0 20px;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.75);
+            box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.75);
 }
 
 
 .average-metrics-widget-wrapper .button-cont {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-top: 10px;
 }
 
@@ -32,7 +44,9 @@
 }
 
 .average-metrics-widget-wrapper .button-cont .widget-button:hover {
-    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+        -ms-transform: scale(1.03);
+            transform: scale(1.03);
 }
 
 .average-metrics-widget-wrapper .button-cont .widget-button.selected {
@@ -40,19 +54,37 @@
 }
 
 .average-metrics-widget-amount-cont {
-    animation-name: cont-appear;
-    animation-duration: 1s;
-    animation-delay: .3s;
+    -webkit-animation-name: cont-appear;
+            animation-name: cont-appear;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-delay: .3s;
+            animation-delay: .3s;
+}
+
+@-webkit-keyframes cont-appear {
+    from {
+        opacity: 0;
+        -webkit-transform: scale(0);
+                transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
 }
 
 @keyframes cont-appear {
     from {
         opacity: 0;
-        transform: scale(0);
+        -webkit-transform: scale(0);
+                transform: scale(0);
     }
     to {
         opacity: 1;
-        transform: scale(1);
+        -webkit-transform: scale(1);
+                transform: scale(1);
     }
 }
 
@@ -60,6 +92,7 @@
     font-size: 20px;
     font-weight: 600;
     color: rgb(50, 50, 50);
+    cursor: pointer;
 }
 
 .average-metrics-widget-title a:active {
@@ -68,8 +101,12 @@
 
 .average-metrics-widget-amount-cont {
     margin: 10px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .average-metrics-widget-amount {
@@ -78,8 +115,12 @@
 }
 
 .average-metrics-widget-amount-rate {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-left: 20px;
 }
 

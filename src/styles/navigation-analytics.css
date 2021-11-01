@@ -19,7 +19,7 @@
 }
 
 .navigation-analytics-wrapper .nav-button-cont {
-    height: 60vh;
+    height: 70vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -42,6 +42,8 @@
             flex-direction: column;
     background-color: #EC244F;
     color: #fff;
+    min-width: -webkit-max-content;
+    min-width: -moz-max-content;
     min-width: max-content;
     width: 75%;
     padding: 10px 40px 10px 10px;
@@ -49,7 +51,10 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     letter-spacing: 1px;
     cursor: pointer;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 .navigation-analytics-wrapper .nav-button.active {
@@ -57,11 +62,20 @@
 }
 
 .navigation-analytics-wrapper .custom-context-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-width: -webkit-max-content;
+    min-width: -moz-max-content;
     min-width: max-content;
     width: 75%;
-    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
     padding: 10px;
     border-radius: 0 10px 10px 0;
     background-color:#2f2f2f;
@@ -69,22 +83,46 @@
 }
 
 .navigation-analytics-wrapper .custom-context-menu.open {
-    transform: translateX(0%);
-    animation-name: openContextMenu;
-    animation-duration: 0.2s;
+    -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-animation-name: openContextMenu;
+            animation-name: openContextMenu;
+    -webkit-animation-duration: 0.2s;
+            animation-duration: 0.2s;
+}
+
+@-webkit-keyframes openContextMenu {
+    from {
+        -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+    }
+    to {
+        -webkit-transform: translateX(0%);
+                transform: translateX(0%);
+    }
 }
 
 @keyframes openContextMenu {
     from {
-        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
     }
     to {
-        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+                transform: translateX(0%);
     }
 }
 
 .navigation-analytics-wrapper .custom-context-menu a {
     margin: 4px 0;
+}
+
+.navigation-analytics-wrapper .custom-context-menu span svg {
+    width: 17px;
+    position: relative;
+    top: 5px;
+    margin-left: 6px;
 }
 
 .navigation-analytics-wrapper .custom-context-menu a:link,
