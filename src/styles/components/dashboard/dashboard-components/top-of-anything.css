@@ -1,0 +1,41 @@
+.top-of-anything-wrapper {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    position: relative;
+}
+
+.top-of-anything-wrapper p {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.top-of-anything-wrapper .dropdown-cont {
+    min-width: 35%;
+}
+
+.top-of-anything-wrapper .bar-chart-cont {
+    min-width: 65%;
+}
+
+.top-of-anything-wrapper .dropdown-cont .react-select-container {
+    width: 100%;
+    margin-top: 30px;    
+}
+
+.top-of-anything-wrapper .dropdown-cont .react-select__control {
+    border-radius: 10px;
+}
+
+.top-of-anything-wrapper .dropdown-cont .react-select__control--menu-is-open,
+.top-of-anything-wrapper .dropdown-cont .react-select__control--is-focused {
+    box-shadow: none;
+    border-color: #CCCCCC;
+}
+
+.top-of-anything-wrapper .dropdown-cont .react-select__option--is-focused,
+.top-of-anything-wrapper .dropdown-cont .react-select__option--is-selected {
+    background-color: hsl(199, 100%, 50%);
+    color: white;
+}
