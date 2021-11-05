@@ -65,13 +65,13 @@ const TopOfAnything = () => {
                 {name: 'Donald Trump', rate: 1641},
             ] 
         }
-    ]         
+    ]             
 
     let selectedOption = selectedValue;
 
     let sortedRates;      
 
-    useEffect(()=>{
+    useEffect(()=>{        
         sortedRates = []; 
         if(selectedOption) {
             for(let i = 0; i < selectedOption['data'].length; i++) {
@@ -103,7 +103,12 @@ const TopOfAnything = () => {
                 setBarFourRate(null);     
                 setBarFiveRate(null);
         }               
-    },[selectedValue]);    
+    },[selectedValue]);  
+    
+    useEffect(() => {
+        setSelectedValue(options[0]);
+        setBarChartTitle(options[0].label)
+    }, [])
 
     const onSelectChange = (selectedOption) => {
         setSelectedValue(selectedOption);
@@ -123,7 +128,6 @@ const TopOfAnything = () => {
                     classNamePrefix="react-select"
                     value={selectedOption}
                     options={options} 
-                    isClearable
                     placeholder='Select Category'
                     onChange={onSelectChange}
                     maxMenuHeight={100}   
