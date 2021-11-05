@@ -99,7 +99,7 @@
   color: white;
   text-shadow: 0 0 2px black;
   -webkit-animation: appear 1s;
-  animation: appear 1s;
+  animation: appear 2s;
   -webkit-animation-timing-function: ease-out;
   animation-timing-function: ease-out;
 }
