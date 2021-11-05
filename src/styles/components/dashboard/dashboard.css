@@ -66,9 +66,16 @@
   -ms-flex-align: center;
   align-items: center;
   -ms-flex-pack: distribute;
+  -webkit-box-pack: justify;
   justify-content: space-between;
   border: 1px dotted grey;
   padding: 30px 0;
+}
+
+.dashboard-wrapper .demography-cont {
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
 }
 
 .dashboard-wrapper .demography-cont {
@@ -82,10 +89,6 @@
 }
 
 .dashboard-wrapper .demography-cont .target-group-cont {
-  width: 40%;
-}
-
-.dashboard-wrapper .demography-cont .demographic-map-cont {
   width: 40%;
 }
 
@@ -105,13 +108,91 @@
   font-size: 60px;
 }
 
+.dashboard-wrapper .demography-cont .demographic-map-cont {
+  width: 40%;
+}
+
+.dashboard-wrapper .demography-cont .demographic-map-cont p {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(50, 50, 50);
+  margin-bottom: 15px;
+  cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.dashboard-wrapper .demography-cont .demographic-map-cont p:hover,
+.dashboard-wrapper .demography-cont .demographic-map-cont p:active {
+  color: hsl(199, 100%, 30%);
+}
+
+.dashboard-wrapper
+  .demography-cont
+  .demographic-map-cont
+  .demographic-map-wrapper {
+  width: 100%;
+  height: 280px;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.75);
+  -webkit-animation-name: demographic-map-wrapper;
+  animation-name: demographic-map-wrapper;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes demographic-map-wrapper {
+  from {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+  to {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes demographic-map-wrapper {
+  from {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+  to {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+}
+
+.dashboard-wrapper
+  .demography-cont
+  .demographic-map-cont
+  .demographic-map-wrapper
+  div[role="button"]
+  img {
+  border-radius: 50%;
+  background-color: hsl(120, 100%, 23%);
+  opacity: 0.7;
+}
+
+.dashboard-wrapper
+  .demography-cont
+  .demographic-map-cont
+  .demographic-map-wrapper
+  div[role="button"]
+  img:hover {
+  background-color: hsl(120, 100%, 13%);
+}
+
 .dashboard-wrapper .lower-cont {
   height: 100%;
 }
 
 .dashboard-wrapper .lower-cont .top-of-anything-cont,
 .dashboard-wrapper .lower-cont .revenue-per-department-cont {
-  width: 45%;  
+  width: 45%;
   height: 100%;
   margin: 0 20px;
 }

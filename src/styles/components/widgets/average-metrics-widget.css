@@ -94,6 +94,7 @@
   cursor: pointer;
 }
 
+.average-metrics-widget-title a:hover,
 .average-metrics-widget-title a:active {
   color: hsl(199, 100%, 30%);
 }
