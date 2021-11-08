@@ -1,4 +1,6 @@
+/* eslint-disable */
 import React, { useRef } from "react";
+import { Link } from "react-scroll";
 
 import '../../styles/components/dashboard/dashboard.css';
 
@@ -12,7 +14,7 @@ import TopOfAnything from "./dashboard-components/TopOfAnything";
 import RevenuePerDepartment from "./dashboard-components/RevenuePerDepartment";
 
 const Dashboard = () => {
-    const dashboardSection = useRef();    
+    const dashboardSection = useRef();        
 
     return(
         <div className='dashboard-body' id='dashboard-body-analytics'>
@@ -29,6 +31,7 @@ const Dashboard = () => {
                         <TargetGroup />
                     </div>
                     <div className='demographic-map-cont'>
+                        <Link spy={true} hashSpy={true} to='demography-body-analytics'><p>Demographic Map</p></Link>                        
                         <DemographicMap />
                     </div>
                 </div>

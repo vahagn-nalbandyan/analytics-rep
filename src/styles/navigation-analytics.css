@@ -63,6 +63,10 @@
   background-color: hsl(199, 100%, 50%);
 }
 
+.navigation-analytics-wrapper .nav-button.selected {
+  background-color: hsl(199, 100%, 50%);
+}
+
 .navigation-analytics-wrapper .custom-context-menu {
   display: -webkit-box;
   display: -ms-flexbox;

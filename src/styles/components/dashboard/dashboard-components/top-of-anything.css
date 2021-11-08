@@ -1,0 +1,163 @@
+.top-of-anything-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+}
+
+.top-of-anything-wrapper p {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.top-of-anything-wrapper .dropdown-cont {
+  min-width: 40%;
+  margin-top: 30px;
+}
+
+.top-of-anything-wrapper .bar-chart-cont {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.top-of-anything-wrapper .bar-chart-cont .bar-chart-title {
+  color: #808080;
+  font-weight: 500;
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin-top: 10px;
+}
+
+.top-of-anything-wrapper .bar-chart-cont .bar-cont-wrapper {
+  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.top-of-anything-wrapper .bar-chart-cont .bar-cont-wrapper .before {
+  background-color: #808080;
+  width: 1px;
+  height: 100%;
+  -webkit-transform: translateY(7px);
+  -ms-transform: translateY(7px);
+  transform: translateY(7px);
+}
+
+.top-of-anything-wrapper .bar-chart-cont .bar-cont-wrapper .bar-wrapper {
+  width: 100%;
+}
+
+.top-of-anything-wrapper .bar-chart-cont .bar-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.top-of-anything-wrapper .bar-chart-cont .bar-cont .title {
+  color: #808080;
+  font-size: 10px;
+  margin: 0 0 2px 5px;
+}
+
+.top-of-anything-wrapper .bar-chart-cont .bar-cont .bar {
+  background-color: hsl(199, 100%, 50%);
+  height: 16px;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-right: 5px;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 0 2px black;
+  -webkit-animation: appear 1s;
+  animation: appear 2s;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+
+.top-of-anything-wrapper .bar-chart-cont .bar-cont .bar:hover {
+  background-color: hsl(199, 100%, 30%);
+}
+
+@-webkit-keyframes appear {
+  from {
+    width: 0%;
+    background-color: hsl(199, 100%, 30%);
+  }
+  to {
+    width: 100%;
+    background-color: hsl(199, 100%, 50%);
+  }
+}
+
+@keyframes appear {
+  from {
+    width: 0%;
+    background-color: hsl(199, 100%, 30%);
+  }
+  to {
+    width: 100%;
+    background-color: hsl(199, 100%, 50%);
+  }
+}
+
+.top-of-anything-wrapper .dropdown-cont .react-select-container {
+  width: 100%;
+}
+
+.top-of-anything-wrapper
+  .dropdown-cont
+  .react-select-container
+  ::-webkit-scrollbar {
+  width: 6px;
+}
+
+.top-of-anything-wrapper .dropdown-cont .react-select__control {
+  border-radius: 10px;
+}
+
+.top-of-anything-wrapper .dropdown-cont .react-select__control--menu-is-open,
+.top-of-anything-wrapper .dropdown-cont .react-select__control--is-focused {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-color: #cccccc;
+}
+
+.top-of-anything-wrapper .dropdown-cont .react-select__option--is-selected {
+  background-color: hsl(199, 100%, 50%);
+  color: white;
+}
+
+.top-of-anything-wrapper .dropdown-cont .react-select__option--is-focused {
+  background-color: hsl(199, 100%, 80%);
+  color: white;
+}
