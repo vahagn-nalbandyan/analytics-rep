@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Chart from 'react-google-charts';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -18,7 +18,7 @@ const GraphWithCompareTo = () => {
     const [startYear, setStartYear] = useState(new Date());
     const [endYear, setEndYear] = useState(new Date());
   
-    const month = new Array();
+    const month = [];
     month[0] = "Jan";
     month[1] = "Feb";
     month[2] = "Mar";
@@ -93,10 +93,6 @@ const GraphWithCompareTo = () => {
             </>
         );
     };
-
-    function daysInMonth (month, year) {
-        return (new Date(year, month, 0).getDate()); 
-    }   
 
     function showCalendar() {
         if(monthSelected) {
