@@ -1,0 +1,32 @@
+.revenue-compare-graph-wrapper .button-cont {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.revenue-compare-graph-wrapper .button-cont .widget-button {
+  width: 40%;
+  height: 15px;
+  font-size: 10px;
+  font-weight: 600;
+  background-color: rgb(173, 173, 173);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.revenue-compare-graph-wrapper .button-cont .widget-button:hover {
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03);
+}
+
+.revenue-compare-graph-wrapper .button-cont .widget-button.selected {
+  background-color: hsl(199, 100%, 50%);
+}
