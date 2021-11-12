@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import '../../styles/components/revenue.css';
 import RevPerDepartment from "./revenue-components/RevPerDepartment"
 import TopSoldProducts from "./revenue-components/TopSoldProducts";
+import GraphWithCompareTo from "./revenue-components/GraphWithCompareTo";
+
 const Revenue = () => {
     const revenueSection = useRef();    
     return(
@@ -14,6 +16,12 @@ const Revenue = () => {
                     <TopSoldProducts />
                 </div>
                 
+                <div className='revenue-section-1'>
+                    <div className='revenue-compare-graph-cont'>
+                        <p>Graph With Compare To</p>
+                        <GraphWithCompareTo />
+                    </div>
+                </div>
             </div>
         </div>
     );
