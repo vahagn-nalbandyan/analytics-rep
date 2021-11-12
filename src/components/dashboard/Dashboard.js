@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { useRef } from "react";
 import { Link } from "react-scroll";
 

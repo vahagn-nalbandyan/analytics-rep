@@ -26,14 +26,14 @@ const RevenuePerDepartment = () => {
         ['Feb',100, 160, 220, 230, 300, 160],
         ['Mar',100, 280, 190, 290, 300, 120],
         ['Apr',100, 100, 240, 200, 320, 180],
-        // ['May',10, 16, 22, 23, 30, 16],
-        // ['Jun',10, 28, 19, 29, 17, 12],
-        // ['Jul',10, 28, 19, 29, 21, 12],
-        // ['Aug',10, 28, 19, 29, 16, 12],
-        // ['Sep',10, 28, 19, 29, 15, 12],
-        // ['Oct',10, 28, 19, 29, 30, 12],
-        // ['Nov',10, 28, 19, 29, 32, 12],
-        // ['Dec',10, 28, 19, 29, 29, 12],
+        ['May',100, 160, 220, 230, 300, 160],
+        ['Jun',135, 280, 190, 290, 170, 120],
+        ['Jul',100, 274, 190, 290, 210, 115],
+        ['Aug',119, 246, 224, 270, 160, 120],
+        ['Sep',100, 280, 190, 290, 150, 120],
+        ['Oct',100, 280, 190, 290, 300, 120],
+        ['Nov',109, 223, 104, 194, 243, 107],
+        ['Dec',105, 208, 117, 236, 209, 112],
         
       ];
 
@@ -41,18 +41,14 @@ const RevenuePerDepartment = () => {
         ['Year', 'The Produce department', 'The Meat department', 'The Seafood department', 'The Beer and Wine section', 'The Health and Beauty department',
               'The Deli/Prepared Foods department'],
         
-        ['2010',100, 280, 190, 290, 300, 120],
-        ['2015',100, 100, 240, 200, 320, 180],
-        ['2020',100, 160, 220, 230, 300, 160],
-        ['2025',120, 100, 240, 200, 320, 180],
-        // ['May',10, 16, 22, 23, 30, 16],
-        // ['Jun',10, 28, 19, 29, 17, 12],
-        // ['Jul',10, 28, 19, 29, 21, 12],
-        // ['Aug',10, 28, 19, 29, 16, 12],
-        // ['Sep',10, 28, 19, 29, 15, 12],
-        // ['Oct',10, 28, 19, 29, 30, 12],
-        // ['Nov',10, 28, 19, 29, 32, 12],
-        // ['Dec',10, 28, 19, 29, 29, 12],
+        ['2008',100, 280, 190, 290, 300, 120],
+        ['2009',100, 100, 240, 200, 320, 180],
+        ['2010',100, 160, 220, 230, 300, 160],
+        ['2011',120, 100, 240, 200, 320, 180],
+        ['2015',135, 280, 190, 290, 170, 120],
+        ['2019',100, 274, 190, 290, 210, 115],
+        ['2020',119, 246, 224, 270, 160, 120],
+        ['2021',100, 280, 190, 290, 150, 120],
         
       ];
 
@@ -63,12 +59,12 @@ const RevenuePerDepartment = () => {
         <div className="rev-per-dep">
             
             <div className='button-cont'>
-                <button onClick={() => onMonthBtnClick()} className="widget-button month">MTH</button>
-                <button onClick={() => onYearBtnClick()} className="widget-button year">YR</button>
+                <button onClick={() => onMonthBtnClick()} className="widget-button">MTH</button>
+                <button onClick={() => onYearBtnClick()} className="widget-button">YR</button>
             </div>
 
 
-        <Chart data={monthSelectedClass === true ? data : dataByYear} chartType="ColumnChart"/>
+            <Chart data={monthSelectedClass === true ? data : dataByYear} chartType="ColumnChart"/>
         </div>
                 
 
