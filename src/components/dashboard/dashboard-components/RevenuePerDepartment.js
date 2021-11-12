@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import Chart from "react-google-charts";
 
 
-import AverageMetricsWidget from "../../widgets/AverageMetricsWidget";
 
 const RevenuePerDepartment = () => {
     const revenueSection = useRef();
@@ -20,14 +19,16 @@ const RevenuePerDepartment = () => {
         setYearSelectedClass(true)
     }
 
+   
     const data = [
-        ['Month', 'The Produce department', 'The Meat department', 'The Seafood department', 'The Beer and Wine section', 'The Health and Beauty department',
-              'The Deli/Prepared Foods department'],
+        ["Department", "Profit during current month", { role: "style" }],
+        // ['Month', 'The Produce department', 'The Meat department', 'The Seafood department', 'The Beer and Wine section', 'The Health and Beauty department',
+        //       'The Deli/Prepared Foods department'],
         
-        ['Jan',120, 100, 240, 200, 320, 180], 
-        ['Feb',100, 160, 220, 230, 300, 160], 
-        ['Mar',100, 280, 190, 290, 300, 120],
-        ['Apr',100, 100, 240, 200, 320, 180], 
+        ['The Produce department',120,"green"], 
+        ['The Meat department',100, "red"], 
+        ['The Seafood department',154, "black"],
+        ['The Beer and Wine section',220, "gold"], 
         // ['May',10, 16, 22, 23, 30, 16], 
         // ['Jun',10, 28, 19, 29, 17, 12],
         // ['Jul',10, 28, 19, 29, 21, 12],
@@ -40,21 +41,15 @@ const RevenuePerDepartment = () => {
       ];
 
       const dataByYear = [
-        ['Year', 'The Produce department', 'The Meat department', 'The Seafood department', 'The Beer and Wine section', 'The Health and Beauty department',
-              'The Deli/Prepared Foods department'],
+          
+        ["Department", "Profit during current year", { role: "style" }],
+        // ['Month', 'The Produce department', 'The Meat department', 'The Seafood department', 'The Beer and Wine section', 'The Health and Beauty department',
+        //       'The Deli/Prepared Foods department'],
         
-        ['2010',100, 280, 190, 290, 300, 120], 
-        ['2015',100, 100, 240, 200, 320, 180], 
-        ['2020',100, 160, 220, 230, 300, 160],
-        ['2025',120, 100, 240, 200, 320, 180], 
-        // ['May',10, 16, 22, 23, 30, 16], 
-        // ['Jun',10, 28, 19, 29, 17, 12],
-        // ['Jul',10, 28, 19, 29, 21, 12],
-        // ['Aug',10, 28, 19, 29, 16, 12],
-        // ['Sep',10, 28, 19, 29, 15, 12],
-        // ['Oct',10, 28, 19, 29, 30, 12],
-        // ['Nov',10, 28, 19, 29, 32, 12],
-        // ['Dec',10, 28, 19, 29, 29, 12],
+        ['The Produce department',340,"blue"], 
+        ['The Meat department',124, "silver"], 
+        ['The Seafood department',217, "red"],
+        ['The Beer and Wine section',195, "light-blue"],
         
       ];
 
@@ -69,26 +64,8 @@ const RevenuePerDepartment = () => {
                 <button onClick={() => onYearBtnClick()} className="widget-button year">YR</button>
             </div>
 
-            {monthSelectedClass && 
-                <Chart
-                    chartType="ColumnChart"
-                    // width="100%"
-                    // height="200px"
-                    data={data}
-                />
-            }
-           
-           { yearSelectedClass && 
 
-            <Chart
-                chartType="ColumnChart"
-                // width="100%"
-                // height="200px"
-                data={dataByYear}
-            />
-           }
-
-                
+        <Chart data={monthSelectedClass === true ? data : dataByYear} chartType="ColumnChart" />               
         </div>
                 
 

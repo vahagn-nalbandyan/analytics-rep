@@ -1,6 +1,7 @@
 .revenue-body {
   height: 100vh;
   padding: 80px 0 0 230px;
+
 }
 
 .revenue-wrapper {
@@ -16,13 +17,47 @@
   flex-direction: column;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
+  
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   border: 1px solid red;
   height: 100%;
+  width:auto;
   padding: 25px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 150px;
+}
+
+
+
+.revenue-wrapper .revenue-per-dep-cont {
+  display: flex;  
+  width: auto;
+  height: 30%;
+  margin: 10px;
+  border: 1px dotted grey;
+}
+
+.revenue-wrapper .revenue-per-dep-cont .rev-per-dep {
+
+  margin: 0 20px;
+  padding: 20px;
+  width:100%;
+  height: 20%;
+}
+
+.revenue-wrapper .top-sold-products-cont .top-sold-products{
+  padding: 10px;
+  width: 100%;
+  height: 100%
+}
+.revenue-wrapper .top-sold-products-cont
+ {
+  display: flex;  
+  width: 40%;
+  height: 35%;
+  margin: 10px;
+  border: 1px dotted grey;
+
 }
