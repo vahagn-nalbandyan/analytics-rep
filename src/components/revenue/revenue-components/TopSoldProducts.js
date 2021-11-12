@@ -28,6 +28,7 @@ const TopSoldProducts = () => {
 
     return (   
         <div className="top-sold-products">
+          
           <Chart 
             chartType="BarChart"
             data={data}  

@@ -59,8 +59,8 @@ const RevenuePerDepartment = () => {
         <div className="rev-per-dep">
             
             <div className='button-cont'>
-                <button onClick={() => onMonthBtnClick()} className="widget-button">MTH</button>
-                <button onClick={() => onYearBtnClick()} className="widget-button">YR</button>
+                <button onClick={() => onMonthBtnClick()} className="widget-button month">MTH</button>
+                <button onClick={() => onYearBtnClick()} className="widget-button year">YR</button>
             </div>
 
 
