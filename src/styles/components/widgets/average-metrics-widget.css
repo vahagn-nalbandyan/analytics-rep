@@ -30,6 +30,17 @@
   margin-top: 10px;
 }
 
+.rev-per-dep .button-cont {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
 .average-metrics-widget-wrapper .button-cont .widget-button {
   width: 45%;
   height: 15px;

@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React, { useRef } from "react";
 import { Link } from "react-scroll";
 
@@ -11,6 +10,7 @@ import DashboardSessionNumbers from "./dashboard-components/DashboardSessionNumb
 import DemographicMap from "./dashboard-components/DemographicMap";
 import TargetGroup from './dashboard-components/TargetGroup';
 import TopOfAnything from "./dashboard-components/TopOfAnything";
+import RevenuePerDepartment from "./dashboard-components/RevenuePerDepartment";
 
 const Dashboard = () => {
     const dashboardSection = useRef();        
@@ -39,7 +39,7 @@ const Dashboard = () => {
                         <TopOfAnything />
                     </div>
                     <div className='revenue-per-department-cont'>
-                        <p>Revenue Per Department</p>
+                        <RevenuePerDepartment />
                     </div>
                 </div>
             </div>
