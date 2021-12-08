@@ -53,7 +53,7 @@
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 5px;
-  border: 1px dotted grey;
+  /* border: 1px dotted grey; */
   padding: 25px 0;
 }
 
@@ -68,7 +68,7 @@
   -ms-flex-pack: distribute;
   -webkit-box-pack: justify;
   justify-content: space-between;
-  border: 1px dotted grey;
+  /* border: 1px dotted grey; */
   padding: 30px 0;
   
 }
@@ -136,7 +136,7 @@
   height: 280px;
   border-radius: 20px;
   border: 2px solid transparent;
-  overflow: hidden;
+  overflow:   hidden;
   -webkit-box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.75);
   box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.75);
   -webkit-animation-name: demographic-map-wrapper;
